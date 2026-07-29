@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student-portal Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+     <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <nav class="navbar">
+        <span class="logo-top">
+            <img src="portal-logo.png" alt="portal-logo">
+            <h3>
+                Student-portal
+            </h3>
+        </span>
+        <ul>
+            <li>
+                <i class="fa-solid fa-house"></i>
+                <a href=""></i>Home</a>
+            </li>
+            <li>
+                <i class="fa-solid fa-users"></i>
+                <a href="">Students</a>
+            </li>
+            <li>
+                <i class="fa-solid  fa-clipboard"></i>
+                <a href="">Attendance</a>
+            </li>
+            <li>
+                <i class="fa-solid fa-chart-bar"></i>
+                <a href="">Reports</a>
+            </li>
+            <li>
+        <i class="fa-solid fa-gear"></i>
+        <a href="">Setting</a>
+            </li>
+        </ul>
+        <span class="logout">
+            <a href=""> <i class="fa-solid fa-right-from-bracket"></i>log out</a>
+        </span>
+     </nav>
+<main>
+    <div class="header">
+        <p class="user">
+          <h4> welcome Tanveer</h4>  <i class="fa-solid fa-user usericon"></i>
+        </p>
+       <button class="theme"> <i class="fa-solid fa-moon"> </i></button>
+    </div>
+
+    <div class="dashboard">
+        <h2>
+            Dashboard
+        </h2>
+        <button class="addbtn">
+            <i class="fa-solid fa-plus"></i>Add Students
+        </button>
+    </div>
+    <div class="cards">
+        <div class="card card1">
+         <span class="title">
+            Total Students
+            <h4>
+ 20
+            </h4>
+            
+         </span>
+         <img src="users.png" alt="users">
+        </div>
+        <div class="card card2">
+         <span class="title">
+            Present today
+            <h4>
+  16
+            </h4>
+         </span>
+         <img src="tick.png" alt="" class="tick">
+        </div>
+        <div class="card card3">
+         <span class="title">
+           Absent today
+            <h4>
+ 4
+            </h4>
+         </span>
+         <img src="image.png" alt="">
+         
+        </div>
+    </div>
+</main>
+</body>
+</html>

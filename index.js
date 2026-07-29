@@ -20,6 +20,7 @@ const enteredpassword=password.value
 for(const user of users){
  if(enteredemail===user.email && enteredpassword===user.password){
     loginpage.textContent="login sucessfully"
+
     
  }
  else if(enteredemail!==user.email && enteredpassword!=user.password){
@@ -33,3 +34,7 @@ for(const user of users){
  }
 }
  })
+ if (user){
+    localStorage.setItem("loogedInuser",JSON.stringify(user));
+    window.location.href="dashboard.html";
+ }
