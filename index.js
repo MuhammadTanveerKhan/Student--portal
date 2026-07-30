@@ -17,24 +17,27 @@ password:"1234"
 const enteredemail=email.value
 const enteredpassword=password.value
  
-for(const user of users){
- if(enteredemail===user.email && enteredpassword===user.password){
-    loginpage.textContent="login sucessfully"
+loginbtn.addEventListener("click", () => {
+    const enteredemail = email.value;
+    const enteredpassword = password.value;
 
-    
- }
- else if(enteredemail!==user.email && enteredpassword!=user.password){
-    alert("Wrong credntials")
- }
- else if(enteredpassword!==user.password){
-    alert("Wrong password")
- }
- else{
-     alert("Wrong email")
- }
-}
- })
- if (user){
-    localStorage.setItem("loogedInuser",JSON.stringify(user));
-    window.location.href="dashboard.html";
- }
+    let foundUser = false;
+
+    for (const user of users) {
+        if (
+            enteredemail === user.email &&
+            enteredpassword === user.password
+        ) {
+            foundUser = true;
+
+            localStorage.setItem("loggedInUser", JSON.stringify(user));
+
+            window.location.href = "dashboard.html";
+            break; // Stop checking other users
+        }
+    }
+
+    if (!foundUser) {
+        alert("Wrong email or password");
+    }
+});

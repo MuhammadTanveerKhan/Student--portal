@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission portal</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+     <link rel="stylesheet" href="admission.css">
+</head>
+<body>
+    <main class="admission">
+        <div class="head">
+            <button> <i class="fa-solid fa-arrow-left"></i>Back</button>
+      <h2>Add Students</h2>
+        </div>
+        <div class="form">
+            <h3>Reg form</h3>
+            <hr>
+        <form action="">
+            <label for="fullname"><b>Full Name</b></label>
+            <input type="text" name="fullname" id="fullname" placeholder="Enter Full Name">
+            <label for="rollnumber"><b>Roll Number</b></label>
+            <input type="number" id="rollnumber" name="rollnumber" required placeholder="Enter Roll Number">
+            <label for="department">Department</label>
+
+<select id="department" name="department">
+    <option value="">-- Select Department --</option>
+    <option value="cs">Computer Science</option>
+    <option value="se">Software Engineering</option>
+    <option value="it">Information Technology</option>
+    <option value="ai">Artificial Intelligence</option>
+    <option value="ds">Data Science</option>
+</select>
+<span class="btns">
+<button class="cancle">
+    Cancle
+</button>
+<button class="save">Save Student</button>
+</span>
+        </form>
+</div>
+    </main>
+</body>
+</html>
