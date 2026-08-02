@@ -3,27 +3,16 @@ let password=document.getElementById("password")
 let loginbtn=document.getElementsByClassName("login-btn")[0]
 let loginpage=document.getElementsByClassName("login-page")[0]
 
-let users=[
-    {
-email:"tanveer12@gmail.com",
-password:"1234"
-    },
-    {
-        email:"hussain12@gmail.com",
-        password:"9988"
-    }
-]
- loginbtn.addEventListener("click",() => {
-const enteredemail=email.value
-const enteredpassword=password.value
- 
+let students=JSON.parse(localStorage.getitem("students"))
+
+
 loginbtn.addEventListener("click", () => {
     const enteredemail = email.value;
     const enteredpassword = password.value;
 
     let foundUser = false;
 
-    for (const user of users) {
+    for (const user of students) {
         if (
             enteredemail === user.email &&
             enteredpassword === user.password
@@ -33,7 +22,7 @@ loginbtn.addEventListener("click", () => {
             localStorage.setItem("loggedInUser", JSON.stringify(user));
 
             window.location.href = "dashboard.html";
-            break; // Stop checking other users
+            break; 
         }
     }
 

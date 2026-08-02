@@ -18,7 +18,11 @@
             <hr>
         <form action="">
             <label for="fullname"><b>Full Name</b></label>
-            <input type="text" name="fullname" id="fullname" placeholder="Enter Full Name">
+            <input type="text" name="fullname" id="fullname" placeholder="Enter Full Name" required>
+            <label for="email"><b>Email</b></label>
+            <input type="email" name="email" id="email" placeholder=" Enter Email" required>
+            <label for="password"><b>Password</b></label>
+            <input type="password" name="password" id="password" placeholder="Enter password" required minlength="8">
             <label for="rollnumber"><b>Roll Number</b></label>
             <input type="number" id="rollnumber" name="rollnumber" required placeholder="Enter Roll Number">
             <label for="department">Department</label>
@@ -40,5 +44,6 @@
         </form>
 </div>
     </main>
+    <script src="admission.js"></script>
 </body>
 </html>
