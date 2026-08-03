@@ -18,11 +18,11 @@
         <ul>
             <li>
                 <i class="fa-solid fa-house"></i>
-                <a href=""></i>Home</a>
+                <a href="../dashboard.html"></i>Home</a>
             </li>
             <li>
                 <i class="fa-solid fa-users"></i>
-                <a href="">Students</a>
+                <a href="../student.html">Students</a>
             </li>
             <li>
                 <i class="fa-solid  fa-clipboard"></i>
@@ -40,5 +40,75 @@
         <span class="logout">
             <a href=""> <i class="fa-solid fa-right-from-bracket"></i>log out</a>
         </span>
+        </nav>
+        <main class="attendence">
+            <div class="att-topbar">
+                <h2>
+                    Students
+                </h2>
+         
+        <button class="addbtn">
+            <i class="fa-solid fa-plus"></i>Add Students
+        </button>
+    </div>
+    <div class="search">
+        <form action="">
+            <input type="text" required  name="searchbar" placeholder="search" >
+            <input type="submit" value="search" id="search">
+            <select id="department" name="department">
+    <option value="">-- Select Department --</option>
+    <option value="cs">Computer Science</option>
+    <option value="se">Software Engineering</option>
+    <option value="it">Information Technology</option>
+    <option value="ai">Artificial Intelligence</option>
+    <option value="ds">Data Science</option>
+</select>
+<select name="status" id="status">
+    <option value=""><b>status</b></option>
+    <option value="Present">Present</option>
+    <option value="Absent">Absent</option>
+</select>
+        
+        </form>
+    </div>
+    <div class="table">
+        <table>
+            <thead>
+            <tr>
+                <th>
+                    #
+                </th>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Department
+                </th>
+                <th>
+                    Rollnumber
+                </th>
+                <th>
+                    Status
+                </th>
+                <th>
+                    action
+                </th>
+            </tr>
+        </thead>
+<tbody>
+    <tr>
+        <td>
+            1
+        </td>
+        <td>
+            Tanveer
+        </td>
+    </tr>
+    
+</tbody>
+        </table>
+    </div>
+        </main>
+        <script src="attendence.js"></script>
 </body>
 </html>

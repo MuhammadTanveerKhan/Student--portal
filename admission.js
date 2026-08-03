@@ -1,14 +1,33 @@
-let students = []
-let form =document.querySelector("form")
-let inputs=document.querySelectorAll("input")
+// Load students from localStorage
+let students = JSON.parse(localStorage.getItem("Students")) || [];
 
-form.addEventListener("submit",(e)=>{
-    e.preventDefault()
-    const object={}
-    inputs.forEach(input => {
-        object[input.name]=input.value
+// Get form and all form fields
+let form = document.querySelector("form");
+let fields = document.querySelectorAll("input, select");
+
+// Submit form
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    // Create a new student object
+    let student = {};
+
+    fields.forEach(field => {
+        student[field.name] = field.value;
     });
-    students.push(object)
-    localStorage.setItem("Students",students)
-})
-console.log(students)
+
+    // Extra properties
+    student.id = Date.now();      // Unique ID
+    student.status = false;       // Attendance status
+
+    // Add to array
+    students.push(student);
+
+    // Save to localStorage
+    localStorage.setItem("Students", JSON.stringify(students));
+
+    console.log(students);
+
+    // Optional: Reset the form
+    form.reset();
+});
